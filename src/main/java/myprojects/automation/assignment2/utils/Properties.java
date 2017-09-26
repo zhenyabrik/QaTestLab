@@ -11,19 +11,6 @@ public class Properties {
     private static final String DEFAULT_BROWSER = BrowserType.CHROME;
 
 
-
-    public static String getDefaultBaseUrl() {
-        return DEFAULT_BASE_URL;
-    }
-
-    public static String getDefaultBaseAdminUrl() {
-        return DEFAULT_BASE_ADMIN_URL;
-    }
-
-    public static String getDefaultBrowser() {
-        return DEFAULT_BROWSER;
-    }
-
     /**
      *
      * @return Website frontend.

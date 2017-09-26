@@ -4,17 +4,14 @@ import myprojects.automation.assignment2.BaseScript;
 import myprojects.automation.assignment2.utils.Properties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
 
 public class CheckMainMenuTest extends BaseScript{
 
     public static void main(String[] args) throws InterruptedException {
 
-        // WebDriver driver = getDriver();
-        System.setProperty("webdriver.gecko.driver","C:\\qatestlab_automation-lecture-2-b54126f80066\\qatestlab_automation-lecture-2-b54126f80066\\src\\main\\resources\\geckodriver.exe");
-        WebDriver driver = new FirefoxDriver();
+        WebDriver driver = getDriver();
         driver.manage().window().maximize();
+
         driver.navigate().to(Properties.getBaseAdminUrl());
         driver.findElement(By.cssSelector("#email")).sendKeys("webinar.test@gmail.com");
         driver.findElement(By.cssSelector("#passwd")).sendKeys("Xcg7299bnSmMuRLp9ITw");
@@ -61,7 +58,7 @@ public class CheckMainMenuTest extends BaseScript{
         driver.findElement(By.cssSelector(".page-title")).getText().contains("Customer Service");
         Thread.sleep(2000);
 
-        //check Support
+        //check Statistic
         driver.findElement(By.id("subtab-AdminStats")).click();
         driver.findElement(By.cssSelector(".page-title")).getText().matches("Статистика");
         Thread.sleep(2000);

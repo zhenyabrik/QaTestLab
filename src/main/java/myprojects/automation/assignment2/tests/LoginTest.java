@@ -4,7 +4,6 @@ import myprojects.automation.assignment2.BaseScript;
 import myprojects.automation.assignment2.utils.Properties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
 public class LoginTest extends BaseScript {
@@ -12,10 +11,9 @@ public class LoginTest extends BaseScript {
     @Test
     public static void main(String[] args) throws InterruptedException {
 
-//        WebDriver driver = getDriver();
-        System.setProperty("webdriver.gecko.driver","C:\\qatestlab_automation-lecture-2-b54126f80066\\qatestlab_automation-lecture-2-b54126f80066\\src\\main\\resources\\geckodriver.exe");
-        WebDriver driver = new FirefoxDriver();
+        WebDriver driver = getDriver();
         driver.manage().window().maximize();
+
         driver.navigate().to(Properties.getBaseAdminUrl());
         driver.findElement(By.cssSelector("#email")).sendKeys("webinar.test@gmail.com");
         driver.findElement(By.cssSelector("#passwd")).sendKeys("Xcg7299bnSmMuRLp9ITw");
