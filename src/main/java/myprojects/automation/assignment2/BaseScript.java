@@ -3,6 +3,8 @@ package myprojects.automation.assignment2;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * Base script functionality, can be used for all Selenium scripts.
  */
@@ -15,6 +17,7 @@ public abstract class BaseScript {
     public static WebDriver getDriver() {
         // TODO return  WebDriver instance
         System.setProperty("webdriver.gecko.driver", "C:\\qatestlab_automation-lecture-2-b54126f80066\\qatestlab_automation-lecture-2-b54126f80066\\src\\main\\resources\\geckodriver.exe");
+//        getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         return new FirefoxDriver();
     }
 }

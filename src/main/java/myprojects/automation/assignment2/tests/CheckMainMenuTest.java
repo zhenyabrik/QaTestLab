@@ -5,6 +5,8 @@ import myprojects.automation.assignment2.utils.Properties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class CheckMainMenuTest extends BaseScript{
 
     public static void main(String[] args) throws InterruptedException {

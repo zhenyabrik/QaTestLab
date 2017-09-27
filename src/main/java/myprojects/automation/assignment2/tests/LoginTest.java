@@ -2,10 +2,9 @@ package myprojects.automation.assignment2.tests;
 
 import myprojects.automation.assignment2.BaseScript;
 import myprojects.automation.assignment2.pages.LoginPage;
-import myprojects.automation.assignment2.pages.ShopHomePage;
+import myprojects.automation.assignment2.pages.DashboardPage;
 import myprojects.automation.assignment2.utils.Credentials;
 import myprojects.automation.assignment2.utils.Properties;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
@@ -34,8 +33,8 @@ public class LoginTest extends BaseScript {
         driver.findElement(LoginPage.getPasswordInput()).sendKeys(Credentials.getPassword());
         driver.findElement(LoginPage.getLoginButton()).click();
         Thread.sleep(2000);
-        driver.findElement(ShopHomePage.getUserAvatar()).click();
-        driver.findElement(ShopHomePage.getLogoutButton()).click();
+        driver.findElement(DashboardPage.getUserAvatar()).click();
+        driver.findElement(DashboardPage.getLogoutButton()).click();
         Thread.sleep(2000);
         driver.quit();
     }
