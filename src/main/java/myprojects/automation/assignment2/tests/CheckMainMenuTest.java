@@ -20,6 +20,7 @@ public class CheckMainMenuTest extends BaseScript{
 
         //check Dashboard
         driver.findElement(By.id("tab-AdminDashboard")).click();
+        driver.findElement(By.cssSelector(".page-title")).isDisplayed();
         driver.findElement(By.cssSelector(".page-title")).getText().matches("Пульт");
         Thread.sleep(2000);
         driver.navigate().refresh();
@@ -27,6 +28,7 @@ public class CheckMainMenuTest extends BaseScript{
 
         //check Orders
         driver.findElement(By.id("subtab-AdminParentOrders")).click();
+        driver.findElement(By.cssSelector(".page-title")).isDisplayed();
         driver.findElement(By.cssSelector(".page-title")).getText().matches("Заказы");
         Thread.sleep(2000);
         driver.navigate().refresh();
@@ -35,7 +37,7 @@ public class CheckMainMenuTest extends BaseScript{
 
         //check Catalog
         driver.findElement(By.id("subtab-AdminCatalog")).click();
-        Thread.sleep(2000);
+        driver.findElement(By.cssSelector(".title")).isDisplayed();
         driver.findElement(By.cssSelector(".title")).getText().matches("товары");
         Thread.sleep(2000);
         driver.navigate().refresh();
@@ -44,6 +46,7 @@ public class CheckMainMenuTest extends BaseScript{
 
         //check Customers
         driver.findElement(By.id("subtab-AdminParentCustomer")).click();
+        driver.findElement(By.cssSelector(".page-title")).isDisplayed();
         driver.findElement(By.cssSelector(".page-title")).getText().matches("Управление клиентами");
         Thread.sleep(2000);
         driver.navigate().refresh();
@@ -52,6 +55,7 @@ public class CheckMainMenuTest extends BaseScript{
 
         //check Support
         driver.findElement(By.id("subtab-AdminParentCustomerThreads")).click();
+        driver.findElement(By.cssSelector(".page-title")).isDisplayed();
         driver.findElement(By.cssSelector(".page-title")).getText().matches("Customer Service");
         Thread.sleep(2000);
         driver.navigate().refresh();
@@ -60,6 +64,7 @@ public class CheckMainMenuTest extends BaseScript{
 
         //check Statistic
         driver.findElement(By.id("subtab-AdminStats")).click();
+        driver.findElement(By.cssSelector(".page-title")).isDisplayed();
         driver.findElement(By.cssSelector(".page-title")).getText().matches("Статистика");
         Thread.sleep(2000);
         driver.navigate().refresh();
