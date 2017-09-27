@@ -18,4 +18,3 @@ public abstract class BaseScript {
         return new FirefoxDriver();
     }
 }
-// FIXME: 26.09.2017 this
